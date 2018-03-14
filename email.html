@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript form validation - checking email</title>
+    <link rel='stylesheet' href='form-style.css' type='text/css' />
+  </head>
+
+  <body onload='document.form1.text1.focus()'>
+    <div class="mail">
+      <h2>Input an email and Submit</h2>
+      <form name="form1">
+<fieldset name="pattern_attribute">
+<legend>The Pattern Attribute</legend>
+Date: <input type="text" name="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}"><br><br>
+E-mail: <input type="email" placeholder="user@provider.com" name="email" pattern="^.+@.+$" onclick="ValidateEmail(document.form1.email)"><br><br>
+</form>
+<form autocomplete="on">
+<fieldset name="personal_info">
+<legend>Personal Information:</legend>
+Title: <input list="titles" name="title" autofocus><br>
+<datalist id="titles">
+<option value="Mr.">
+<option value="Mrs.">
+<option value="Ms.">
+</datalist>
+First Name: <input type="text" name="firstname" maxlength="8" required><br>
+Last Name: <input type="text" name="lastname" maxlength="8" required><br>
+Date of Birth: <input type="date" name="dob"><br>
+
+Best Home Building Skill:<br>
+<textarea name="bestskill" placeholder="Carpentry" maxlength="9">
+</textarea>
+
+</fieldset>
+    </div>
+    <script src="email-validation.js"></script>
+  </body>
+
+</html>
